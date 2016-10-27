@@ -1,0 +1,42 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+	height: 100%;
+  width: 100%;
+  
+}
+
+input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#jen{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left:0;
+}
+
+textarea {
+	
+	
+	height: 50px;
+	width:80%;
+	margin-bottom: 20px;
+	
+
+	
+	 border:0;
+
+}
+
+[contenteditable] {
+	border: 1px solid green;
+	height: 300px;
+	width: 100%;
+}
+
