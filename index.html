@@ -1,75 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BRX IME Test</title>
 <meta name="author" content="" />
-<link href="/css/jquery.ime.css" rel="stylesheet" />
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
- -->
- <!-- Latest compiled and minified CSS -->
+<link href="css/jquery.ime.css" rel="stylesheet" />
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="/libs/rangy/rangy-core.js"></script>
-<script src="/src/jquery.ime.js"></script>
-<script src="/src/jquery.ime.selector.js"></script>
-<script src="/src/jquery.ime.preferences.js"></script>
-<script src="/src/jquery.ime.inputmethods.js"></script>
-<script src="/examples/jquery.ns-autogrow.min.js"></script>
-<!-- Demo -->
-<link href="/examples/demo.css" rel="stylesheet" />
+<script src="libs/rangy/rangy-core.js"></script>
+<script src="src/jquery.ime.js"></script>
+<script src="src/jquery.ime.selector.js"></script>
+<script src="src/jquery.ime.preferences.js"></script>
+<script src="src/jquery.ime.inputmethods.js"></script>
+<script src="examples/jquery.ns-autogrow.min.js"></script>
+<link href="examples/demo.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="//getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
 <script>
 	$( document ).ready( function () {
 		$( 'input, textarea, [contenteditable]' ).ime();
 	} );
-	$(function(){
-	  //$('.example1 textarea').autogrow();
-	  $('.jumbotron textarea').autogrow({vertical: true, horizontal: false,flickering: false});
-	 // $('.example3 textarea').autogrow({vertical: false, horizontal: true});
-	 // $('.example4 textarea').autogrow({flickering: false});
+	$(function(){	
+	  $('.jumbotron textarea').autogrow({vertical: true, horizontal: false,flickering: false});	
 	});
 </script>
 </head>
 
 <body>
-
-	<div style="text-align: center;height: 100%;position: relative;">
-		<div  class="container" style="height: 90%;position: relative;">
-		
-		
+<div style="text-align: center;height: 100%;position: relative;">
+	<div  class="container" style="height: 90%;position: relative;">		
 		<div class="jumbotron" style="height: 100%;position: relative; ">
 			<h1>BRX IME Test</h1>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-
-			
-				
+			<br><br><br><br><br><br>				
 			<div id="jen">
 				<textarea id="en-input"></textarea>	
-			</div>
-				
+			</div>				
 		</div>
-		
-	
-		
 		<footer>
 			<p>Language addition to jQuery.ime</p>
 		</footer>
 	</div>
-	</div>
-	
+</div>	
 </body>
 </html>
