@@ -876,7 +876,7 @@ objDiv.scrollTop = objDiv.scrollHeight;
 	/**
 	 * @property {string} Relative/absolute path for the rules folder of jquery.ime
 	 */
-	$.ime.path = '../';
+	$.ime.path = '';
 	$.ime.textEntryFactory = TextEntryFactory.static.singleton;
 	$.ime.TextEntry = TextEntry;
 	$.ime.inheritClass = inheritClass;
