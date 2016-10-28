@@ -1,47 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>BRX IME Test</title>
 <meta name="author" content="" />
 <link href="css/jquery.ime.css" rel="stylesheet" />
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+ -->
+ <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="libs/rangy/rangy-core.js"></script>
 <script src="src/jquery.ime.js"></script>
 <script src="src/jquery.ime.selector.js"></script>
 <script src="src/jquery.ime.preferences.js"></script>
 <script src="src/jquery.ime.inputmethods.js"></script>
-<script src="examples/jquery.ns-autogrow.min.js"></script>
-<link href="examples/demo.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="//getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+<script src="jquery.ns-autogrow.min.js"></script>
+<!-- Demo -->
+<link href="demo.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="jumbotron-narrow.css">
 <script>
 	$( document ).ready( function () {
 		$( 'input, textarea, [contenteditable]' ).ime();
 	} );
-	$(function(){	
-	  $('.jumbotron textarea').autogrow({vertical: true, horizontal: false,flickering: false});	
+
+	$(function(){
+	  //$('.example1 textarea').autogrow();
+	  $('.jumbotron textarea').autogrow({vertical: true, horizontal: false,flickering: false});
+	 // $('.example3 textarea').autogrow({vertical: false, horizontal: true});
+	 // $('.example4 textarea').autogrow({flickering: false});
 	});
+
+	var s=1;
+	$(function() {
+    $("#report").click(function() {
+
+    	if (s==1) {
+    		 $('#main').css('height', 'auto');
+         $('iframe').css('height', 900);
+         $('#jen').css('position', 'relative');
+         s=0;
+         location.href = "#freport";
+    	}else{
+    		 $('#main').css('height', '100%');
+         $('iframe').css('height', 0);
+         $('#jen').css('position', 'absolute');
+         s=1;
+    	}
+        
+    });
+});
+
+
+
 </script>
 </head>
 
 <body>
-<div style="text-align: center;height: 100%;position: relative;">
-	<div  class="container" style="height: 90%;position: relative;">		
-		<div class="jumbotron" style="height: 100%;position: relative; ">
-			<h1>BRX IME Test</h1>
-			<br><br><br><br><br><br>				
-			<div id="jen">
+	<div id="main">
+
+		<div  class="container" style="height: 93%;position: relative;">
+			<div class="jumbotron" style="height: 100%;position: relative; ">
+				
+				<h2>BRX IME Test</h2>
+
+				<div id="line">					
+				</div>	
+				
+				<div id="divop">
+				<div id="forscroll">
+
+					<div class="row mar">
+						<div class="chat">
+							<p  class="bubble me ded" ></p>
+						</div>
+					</div>
+					<div class="row mar">
+						<div class="chat">
+							<div  class="bubble you ded" ></div>
+						</div>
+					</div>			
+		
+
+				</div>
+				</div>
+				
+			</div>
+			<div id="jen" class="jen">				
 				<textarea id="en-input"></textarea>	
-			</div>				
+			</div>
+		<button id="report" class="btn btn-danger">Report Errors</button>
+		<br>
+		<br>
+		<a name="freport"></a>
+<iframe name="freport" src="https://docs.google.com/forms/d/e/1FAIpQLSdXvaEKM83dwE2Ih2axNH6LVg6KQAh-3eA2Wb9pkttmWy0pQw/viewform?embedded=true" height="0" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+				
 		</div>
-		<footer>
-			<p>Language addition to jQuery.ime</p>
-		</footer>
+	
+
+		
+		
 	</div>
-</div>	
+	<div style="height: 100px;pointer-events: none;">
+			
+		</div>
+	<div class="jen1" style="height: 100px;">
+			<footer>
+			<p>Bodo transliteration support addition to jQuery.ime</p>
+			<a href="https://github.com/ibty/brx-ime">Github</a>
+		</footer>
+		</div>
+	<script type="text/javascript">
+			$("#en-input").on("change keyup paste", function() { 
+				$('.bubble.me.ded').text($("#en-input").val());
+			});
+
+	</script>
+	
 </body>
 </html>
