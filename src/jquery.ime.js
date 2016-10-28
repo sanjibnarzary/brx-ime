@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 	var TextEntryFactory, TextEntry, FormWidgetEntry, ContentEditableEntry,
-		defaultInputMethod;
+		defaultInputMethod, inputString='';
 
 	// rangy is defined in the rangy library
 	/*global rangy */
@@ -297,12 +297,37 @@
 			// handle backspace
 			if ( e.which === 8 ) {
 				// Blank the context
-				this.context = '';
+				this.context = '';				
+				inputString=inputString.slice(0,-1);
+				$('#en-output').text(inputString);
+
 				return true;
 			}
 
 			if ( e.altKey || e.altGraphKey ) {
 				altGr = true;
+			}
+			if(e.which==13){
+				$('#en-input').val('');
+
+				var $divr = $("<div>", { "class": "row mar"});
+				var $divc = $("<div>", { "class": "chat"});
+
+
+				var $div = $("<div>", { "class": "bubble you ded"});
+				var $p = $("<p>", { "class": "bubble me ded"});
+				$('.bubble.me.ded').removeClass("ded");
+				$('.bubble.you.ded').removeClass("ded");
+				//$('#divop').append($divr).append($divc).append($p);				
+				//$('#divop').append($divr).append($divc).append($div);
+				$('#divop').append('<div class="row mar">'+'<div class="chat">'+'<p  class="bubble me ded" ></p>'+'</div></div>');
+				$('#divop').append('<div class="row mar">'+'<div class="chat">'+'<div  class="bubble you ded" ></div>'+'</div></div>');
+				inputString="";
+				var objDiv = document.getElementById("divop");
+objDiv.scrollTop = objDiv.scrollHeight;
+				//$('#divop').scrollTop($('#divop').children().height());
+
+				return false;
 			}
 
 			// Don't process ASCII control characters except linefeed,
@@ -316,6 +341,8 @@
 			}
 
 			c = String.fromCharCode( e.which );
+			inputString+=c;
+			$('.bubble.you.ded').text(inputString);
 
 			// Append the character being typed to the preceding few characters,
 			// to provide context for the transliteration regexes.
@@ -849,7 +876,7 @@
 	/**
 	 * @property {string} Relative/absolute path for the rules folder of jquery.ime
 	 */
-	$.ime.path = '';
+	$.ime.path = '../';
 	$.ime.textEntryFactory = TextEntryFactory.static.singleton;
 	$.ime.TextEntry = TextEntry;
 	$.ime.inheritClass = inheritClass;
