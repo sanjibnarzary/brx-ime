@@ -6,7 +6,32 @@ html{
 body{
 	height: 100%;
   width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
   
+  
+}
+#main{
+	text-align: center;
+	position: relative;
+	background: #4B3D3A;
+	height: 100%;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	box-shadow: 3px 3px 10px 6px #AFAFAF;
+}
+#line{
+	width: 100%;
+	position: absolute;
+	height: 2px;
+	background: black;
+	left: 0;
+
+}
+
+.jumbotron{
+	padding-top: 1px;
+	background: #DFDFDF;
 }
 
 input {
@@ -14,20 +39,47 @@ input {
 	margin-bottom: 20px;
 }
 
-#jen{
+#divop{
+	height: 80%;
+	overflow:auto;
+	margin-top: 13px;
+
+}
+
+.jen{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	left:0;
+	
 }
+
+.jen1{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left:0;
+	text-align: center;
+	background: #FFFFFF;
+	z-index: -1;
+	 padding-top: 20px;
+}
+
+iframe{
+	width: 100%;
+}
+
 
 textarea {
 	
 	
 	height: 50px;
 	width:90%;
-	margin-bottom: 20px;	
-	border:0;
+	margin-bottom: 20px;
+	
+
+	
+	 border:0;
 
 }
 
@@ -36,4 +88,52 @@ textarea {
 	height: 300px;
 	width: 100%;
 }
+
+
+.chat {
+    width:100%;
+    display: block;
+}
+
+.ded{
+
+}
+
+.mar{
+	margin-left: 0PX;
+	margin-right: 0PX;
+}
+
+.bubble{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 1px 5px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+}
+
+
+
+.me {
+    float: left;   
+    margin: 5px 45px 5px 20px; 
+    background: #82E0AA;        
+}
+
+
+
+.you {
+    float: right;    
+    margin: 5px 20px 5px 45px; 
+            
+}
+
+.you::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+    right: -9px;    
+}
+
 
