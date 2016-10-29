@@ -945,7 +945,7 @@ objDiv.scrollTop = objDiv.scrollHeight;
 
 	// default options
 	$.ime.defaults = {
-		languages: ['hi'], // Languages to be used- by default all languages
+		languages: ['brx'], // Languages to be used- by default all languages
 		helpHandler: null, // Called for each ime option in the menu
 		showSelector: true
 	};

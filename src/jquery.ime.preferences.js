@@ -8,7 +8,7 @@
 			previousLanguages: [], // array of previous languages
 			previousInputMethods: [], // array of previous inputmethods
 			imes: {
-				hi: 'hi-transliteration'
+				brx: 'brx-transliteration'
 			}
 		},
 
@@ -36,7 +36,7 @@
 		},
 
 		getDefaultLanguage: function () {
-			return 'hi';
+			return 'brx';
 		},
 
 		getPreviousLanguages: function () {
